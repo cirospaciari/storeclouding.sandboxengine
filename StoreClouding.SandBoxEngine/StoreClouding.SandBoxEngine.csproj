@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoreClouding.SandBoxEngine</RootNamespace>
+    <AssemblyName>StoreClouding.SandBoxEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\SandBox GameEngine\agora vai mesmo\Build\Game_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\SandBox GameEngine\agora vai mesmo\Build\Game_Data\Managed\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SandBox GameEngine\agora vai mesmo\Build\Game_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\SocketDefaultMessages.cs" />
+    <Compile Include="Common\SocketMessageTypes.cs" />
+    <Compile Include="Communication\SocketControllerApplication.cs" />
+    <Compile Include="Communication\SocketListener.cs" />
+    <Compile Include="Communication\SocketListenerConnection.cs" />
+    <Compile Include="Communication\SocketMessageTypeBase.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessage.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessageType.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessageResponse.cs" />
+    <Compile Include="Communication\Terrain\TerrainSocketMessageType.cs" />
+    <Compile Include="DAO\ConnectionManagerApplication.cs" />
+    <Compile Include="Terrain\Data\BlockData.cs" />
+    <Compile Include="Terrain\Generator\PerlinNoise2D.cs" />
+    <Compile Include="Terrain\Generator\PerlinNoise3D.cs" />
+    <Compile Include="Terrain\Generator\TerrainGenerator.cs" />
+    <Compile Include="DAO\Terrain\Block.cs" />
+    <Compile Include="DAO\Terrain\BlockData.cs" />
+    <Compile Include="DAO\Terrain\ChunkData.cs" />
+    <Compile Include="GameApplication.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terrain\TerrainApplication.cs" />
+    <Compile Include="Terrain\Custom\IMapCustomer.cs" />
+    <Compile Include="Terrain\Custom\WorldMapCustomer.cs" />
+    <Compile Include="Terrain\Data\ChunkData.cs" />
+    <Compile Include="Terrain\Map\Block.cs" />
+    <Compile Include="Terrain\Map\BlockSet.cs" />
+    <Compile Include="Terrain\Utils\Chunk.cs" />
+    <Compile Include="Terrain\Map\Map.cs" />
+    <Compile Include="Terrain\Utils\Color.cs" />
+    <Compile Include="Terrain\Utils\Vector2.cs" />
+    <Compile Include="Terrain\Utils\Vector3.cs" />
+    <Compile Include="Terrain\Utils\ProtoVector2.cs" />
+    <Compile Include="Terrain\Utils\ProtoVector3.cs" />
+    <Compile Include="Terrain\Utils\Random.cs" />
+    <Compile Include="Terrain\Utils\Vector2i.cs" />
+    <Compile Include="Terrain\Utils\Vector2iComparer.cs" />
+    <Compile Include="Terrain\Utils\Vector3i.cs" />
+    <Compile Include="Terrain\Utils\Vector3iComparer.cs" />
+    <Compile Include="Terrain\Utils\Vector3Utils.cs" />
+    <Compile Include="Threading\ApplicationThread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\Temp.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

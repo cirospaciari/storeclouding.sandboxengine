@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreClouding.SandBoxEngine", "StoreClouding.SandBoxEngine\StoreClouding.SandBoxEngine.csproj", "{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreClouding.SandBoxEngine.Tests", "StoreClouding.SandBoxEngine.Tests\StoreClouding.SandBoxEngine.Tests.csproj", "{2F4332B5-D48E-4BE7-BF47-4FEC12DF8A83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreClouding.SandBoxEngine.Client", "StoreClouding.SandBoxEngine.Client\StoreClouding.SandBoxEngine.Client.csproj", "{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF11E07A-7E91-45C7-92DF-BC8D2D9F8E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4332B5-D48E-4BE7-BF47-4FEC12DF8A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4332B5-D48E-4BE7-BF47-4FEC12DF8A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4332B5-D48E-4BE7-BF47-4FEC12DF8A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4332B5-D48E-4BE7-BF47-4FEC12DF8A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

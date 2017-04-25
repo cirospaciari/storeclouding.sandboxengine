@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32F8E299-3366-4AB9-9F39-0CDEEE624F7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoreClouding.SandBoxEngine.Client</RootNamespace>
+    <AssemblyName>StoreClouding.SandBoxEngine.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\SandBox GameEngine\agora vai mesmo\Build\Game_Data\Managed\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\SandBox GameEngine\agora vai mesmo\Build\Game_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\SocketDefaultMessages.cs" />
+    <Compile Include="Common\SocketMessageTypes.cs" />
+    <Compile Include="Communication\SocketClient.cs" />
+    <Compile Include="Communication\SocketControllerApplication.cs" />
+    <Compile Include="Communication\SocketMessageTypeBase.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessage.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessageResponse.cs" />
+    <Compile Include="Communication\Terrain\TerrainMessageType.cs" />
+    <Compile Include="Communication\Terrain\TerrainSocketMessageType.cs" />
+    <Compile Include="GameApplication.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terrain\Builder\Components\Chunk.cs" />
+    <Compile Include="Terrain\Builder\Components\Map.cs" />
+    <Compile Include="Terrain\Builder\MarchingCubes.cs" />
+    <Compile Include="Terrain\Builder\MarchingCubesTables.cs" />
+    <Compile Include="Terrain\Builder\TerrainBuilder.cs" />
+    <Compile Include="Terrain\Data\BlockData.cs" />
+    <Compile Include="Terrain\Data\BuildData.cs" />
+    <Compile Include="Terrain\Data\ChunkData.cs" />
+    <Compile Include="Terrain\Data\MeshData.cs" />
+    <Compile Include="Terrain\Map\Block.cs" />
+    <Compile Include="Terrain\Map\BlockSet.cs" />
+    <Compile Include="Terrain\Map\Map.cs" />
+    <Compile Include="Terrain\TerrainApplication.cs" />
+    <Compile Include="Terrain\Utils\Chunk.cs" />
+    <Compile Include="Terrain\Utils\Vector3i.cs" />
+    <Compile Include="Terrain\Utils\Vector3Utils.cs" />
+    <Compile Include="Threading\ApplicationThread.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
